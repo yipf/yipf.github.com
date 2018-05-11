@@ -14,25 +14,54 @@ h1 {text-align: center}
 .search-bar {
 	text-align: center
 }
+
+input {width: 50%;}
 </style>
 
 </head>
 <body>
 
 <h1> 购你所购</h1>
-<p class="search-bar"> <input v-model="message"/><input type="button" value="GO!" onclick="go(this);"/></p>
+<p class="search-bar">
+<select v-model="category">
+  <option v-for="option in options" v-bind:value="option">
+    {{ option }}
+  </option>
+</select>
+<input 
+placeholder="请输入搜索内容 " 
+v-on:keyup.enter="search(category,message)" 
+v-model="message"
+/>
+</p>
+
+<ul id="results">
+</ul>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script type="text/javascript" charset="utf-8">
 
-var query=new Vue({ 
+var search=new Vue({ 
   el: '.search-bar',
-  data: { message: '搜索' }
+  data: { 
+	message: '',
+	category: "自定义",
+	options: ["自定义","asdfasd"],
+  },
+  methods:{
+	search: function(category,message){
+		alert(category+":"+message);
+	}
+  }
 });
 
-var go=function(dom){
-	alert(query.message);
-}
+var results=new Vue({
+	el: "#results",
+	data : {items:[]}
+	
+})
+
 
 </script>
 </html>
