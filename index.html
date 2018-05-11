@@ -20,14 +20,18 @@ h1 {text-align: center}
 <body>
 
 <h1> 购你所购</h1>
-<p class="search-bar"> <input id="query"/><input type="button" value="GO!" onclick="go(this);"/></p>
+<p class="search-bar"> <input v-model="message"/><input type="button" value="GO!" onclick="go(this);"/></p>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script type="text/javascript" charset="utf-8">
 
+var query=new Vue({ 
+  el: '.search-bar',
+  data: { message: '搜索' }
+});
+
 var go=function(dom){
-	var query=dom.previousSibling.value;
-	alert(query);
+	alert(query.message);
 }
 
 </script>
