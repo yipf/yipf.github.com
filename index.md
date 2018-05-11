@@ -1,5 +1,6 @@
 ---
 title: 购购购
+site_name: 购购购
 ---
 
 
