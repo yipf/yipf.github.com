@@ -21,7 +21,7 @@ input {width: 50%;}
 </head>
 <body>
 
-<h1><img src="logo.png" alt="购你所购"></h1>
+<h1><img src="assets/logo.PNG" alt="购你所购"></h1>
 <p class="search-bar">
 <select v-model="category">
   <option v-for="option in options" v-bind:value="option">
@@ -46,8 +46,8 @@ var search=new Vue({
   el: '.search-bar',
   data: { 
 	message: '',
-	category: "自定义",
-	options: ["自定义","asdfasd"],
+	category: "全部",
+	options: ["全部","家居","百货","鞋靴","配饰","母婴"],
   },
   methods:{
 	search: function(category,message){
