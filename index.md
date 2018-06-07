@@ -1,6 +1,3 @@
-
-
-
 ---
 title: YIPF
 site_name: YIPF
