@@ -11,7 +11,7 @@ site_name: YIPF
 ## 个人页面
 
 - [Git projects](https://github.com/yipf/)
-- [public staff](http://whoiswho.frp3.huatong.org)
+- [public staff](http://whoiswho.frp3.chuantou.org)
 
 ## Welcome to GitHub Pages
 
